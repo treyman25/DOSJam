@@ -1,0 +1,39 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Sprites/icon.png" type="Texture" id=1]
+[ext_resource path="res://Button.gd" type="Script" id=2]
+[ext_resource path="res://Sprites/dssdsd.png" type="Texture" id=3]
+
+[node name="TestScene" type="Node2D"]
+
+[node name="Control" type="Control" parent="."]
+
+[node name="Button" type="Button" parent="Control"]
+margin_left = 176.0
+margin_top = 192.0
+margin_right = 252.0
+margin_bottom = 272.0
+icon = ExtResource( 1 )
+script = ExtResource( 2 )
+
+[node name="Dssdsd" type="Sprite" parent="."]
+position = Vector2( 511, 111 )
+scale = Vector2( 0.48, 0.4 )
+texture = ExtResource( 3 )
+
+[node name="ScreenBorders" type="CanvasLayer" parent="."]
+
+[node name="LeftBorder" type="ColorRect" parent="ScreenBorders"]
+margin_right = 54.0
+margin_bottom = 200.0
+rect_pivot_offset = Vector2( 39, 78 )
+color = Color( 0, 0, 0, 1 )
+
+[node name="RightBorder" type="ColorRect" parent="ScreenBorders"]
+margin_left = 373.0
+margin_right = 427.0
+margin_bottom = 200.0
+rect_pivot_offset = Vector2( 39, 78 )
+color = Color( 0, 0, 0, 1 )
+
+[connection signal="pressed" from="Control/Button" to="Control/Button" method="_on_Button_pressed"]
