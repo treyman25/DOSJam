@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://addons/github-integration/icons/bell.png" type="Texture" id=1]
+[ext_resource path="res://stars.gd" type="Script" id=3]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="stars" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+script = ExtResource( 3 )
